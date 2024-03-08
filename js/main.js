@@ -10,7 +10,7 @@ function Pelicula(id, titulo, formato, precio, disponibles, imagenURL) {
 
 // AARRAY DE 10 PELICULAS
 const peliculas = [
-    new Pelicula(1, "el señor de los anillos", "2D", 2300, 14, "El Señor de los anillos.jpg"),
+    new Pelicula(1, "el señor de los anillos", "2D", 2300, 14, "El Senior de los anillos.jpg"),
     new Pelicula(2, "harry potter", "3D", 1200, 30, "harry potter.jpg"),
     new Pelicula(3, "el titanic", "4D", 2600, 24, "titanic.jpg"),
     new Pelicula(4, "avatar", "4D", 2500, 13, "avatar.jpg"),
