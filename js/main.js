@@ -5,7 +5,7 @@ function Pelicula(id, titulo, formato, precio, disponibles, imagenURL) {
     this.formato = formato;
     this.precio = precio;
     this.disponibles = disponibles;
-    this.imagenURL = imagenURL; // Ruta relativa a la carpeta "img"
+    this.imagenURL = imagenURL; 
 }
 
 // AARRAY DE 10 PELICULAS
@@ -42,11 +42,10 @@ function filtrarServicio(arr, filtro) {
 
 
 function crearHtml(peliculas) {
-    // Llamo al elemento contenedor
+
     const contenedor = document.getElementById("contenedor");
     contenedor.innerHTML = "";
 
-    // Iterar sobre las películas
     for (let i = 0; i < peliculas.length; i++) {
         // Cada 4 películas, abrir una nueva fila
         if (i % 4 === 0) {
@@ -56,9 +55,9 @@ function crearHtml(peliculas) {
 
         // Crear la tarjeta de la película
         const card = document.createElement("div");
-        card.classList.add("col-xl-3"); // Bootstrap column class
-        card.classList.add("col-sm-6"); // Bootstrap column class
-        card.classList.add("col-md-3"); // Bootstrap column class
+        card.classList.add("col-xl-3");
+        card.classList.add("col-sm-6"); 
+        card.classList.add("col-md-3"); 
         card.innerHTML = `
             <div class="card">
                 <img class="img-fluid" src="../img/${peliculas[i].imagenURL}" alt="${peliculas[i].titulo}">
@@ -75,7 +74,6 @@ function crearHtml(peliculas) {
 
         fila.appendChild(card);
 
-        // Cada 4 películas, cerrar la fila y agregarla al contenedor
         if ((i + 1) % 4 === 0 || i === peliculas.length - 1) {
             contenedor.appendChild(fila);
         }
@@ -85,43 +83,16 @@ function crearHtml(peliculas) {
 
 crearHtml(peliculas);
 
-/*
-
-function crearHtmlCarrito(peliculas) {
-    // Limpia el contenido del contenedor del carrito
-    carrito.innerHTML = "";
-
-    // Crear HTML para cada película en el carrito
-    peliculas.forEach((el) => {
-        let htmlCarrito = `
-            <div class="row">
-                <div class="col-3 mt-0">
-                    <h2 class="nombreProd mt-0">${el.titulo}</h2>
-                </div>
-                <div class="col-2 mt-0">
-                    <p class="precioProd mt-0">$${el.precio}</p>
-                </div>
-            </div>
-        `;
-
-        // Agrega el HTML al contenedor del carrito
-        carrito.innerHTML += htmlCarrito;
-    });
-}
-
-*/
-
-
 const carrito = [];
 
 function actualizarCarrito() {
     const carritoContainer = document.getElementById("carrito-lista");
-    carritoContainer.innerHTML = ""; // Limpiar el contenido actual del carrito
+    carritoContainer.innerHTML = ""; 
 
-    // Iterar sobre las películas en el carrito y agregarlas al HTML del carrito
+
     carrito.forEach(pelicula => {
         const itemCarrito = document.createElement("div");
-        itemCarrito.classList.add("carrito-item"); // Clase para estilizar los elementos del carrito
+        itemCarrito.classList.add("carrito-item"); 
         itemCarrito.innerHTML = `
             <div class="carrito-item-info mt-4">
                 <h4>${pelicula.titulo}</h4>
@@ -132,14 +103,12 @@ function actualizarCarrito() {
         carritoContainer.appendChild(itemCarrito);
     });
 
-    // Calcular el total del carrito
     const totalCarrito = document.getElementById("carrito-total");
     const total = carrito.reduce((acc, pelicula) => acc + pelicula.precio, 0);
     totalCarrito.textContent = `$${total}`;
 }
 
     
-// Manejador de eventos para agregar películas al carrito
 function agregarAlCarrito(id) {
     const pelicula = peliculas.find(pelicula => pelicula.id === id);
     if (pelicula) {
@@ -147,8 +116,6 @@ function agregarAlCarrito(id) {
         actualizarCarrito();
     }
 }
-
-
 
 const ingreso = document.querySelectorAll("input"),
     btnSearch = document.querySelector("#btnSearch"),
