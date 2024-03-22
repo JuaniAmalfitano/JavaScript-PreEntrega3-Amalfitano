@@ -20,15 +20,18 @@
 
   <div class="container headerColor">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom headerColor">
-      <a href="./index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <a href="./index.html"
+        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
         <img class="img-fluid" src="./img/cine logo.png" alt="">
       </a>
 
       <ul class="nav">
-        <li class="navItem"><a href="./html/cartelera.html" class=" linksHeader" aria-current="page">CARTELERA</a>
+        <li class="navItem"><a href="./html/cartelera.html" class=" linksHeader" aria-current="page">Cartelera</a>
         </li>
-        <li class="navItem"><a href="#" class="linksHeader">PRECIOS</a></li>
-        <li class="navItem"><a href="#" class="linksHeader">FORMATOS</a></li>
+        <li class="navItem login-links"><a href="./html/iniciarSesion.html" class="linksHeader">Iniciar Sesion</a></li>
+        <li class="navItem login-links"><a href="./html/registro.html" class="linksHeader">Registrarse</a></li>
+
+        <li id="logout" class="navItem"><a href="" class="linksHeader">Logout</a></li>
       </ul>
     </header>
   </div>
@@ -41,11 +44,12 @@
   <div class="container headerColor">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <p class="col-md-4 mb-0 text-white">&copy; 2024 Company, Inc</p>
-  
-      <a href="./index.html" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+
+      <a href="./index.html"
+        class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
         <img class="headerColor" src="./img/cine logo.png" alt="">
       </a>
-  
+
       <ul class="nav">
         <li class="navItem"><a href="./html/cartelera.html" class=" linksHeader" aria-current="page">CARTELERA</a>
         </li>
@@ -56,7 +60,11 @@
   </div>
 
   <!-- custon js -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./js/iniciarSesion.js"></script>
+  <script src="./js/registrarse.js"></script>
   <script src="./js/main.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>

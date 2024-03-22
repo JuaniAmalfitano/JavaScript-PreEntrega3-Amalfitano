@@ -97,8 +97,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 5rem;
-  height: 2rem;
+  width: 7rem;
+  height: 3rem;
 }
 
 .btnComprar:hover {
@@ -151,6 +151,14 @@
   align-items: center;
   text-transform: capitalize;
   padding-bottom: 15px;
+}
+
+.fotoCarrito {
+  width: 100px;
+}
+
+.carrito-item-info {
+  margin-right: 800px;
 }
 
 
@@ -211,4 +219,119 @@
   color: #ff0000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.containerr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-pasarela {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #000 1px solid;
+  padding: 3px 3px;
+  width: 40%;
+}
+
+#nombreYApellidoTitular {
+  width: 50%;
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.card-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-number-input {
+  width: 75px;
+  margin-right: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#expiration,
+.cvc-input {
+  width: 25%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.hideExp {
+  display: none;
+}
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------INICIAR SESION------------------------------------------------------------------*/
+
+h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 40px;
+}
+.container-general {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/inicioSesion/cinema-movie-horizontal-banner-hall-cartoon-style-vector.jpg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+.form-box {
+  top: 50px;
+  background-color: #fff;
+  width: 400px;
+  height: 455px;
+  position: relative;
+  margin: 6% auto;
+  padding: 5px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.input-container {
+  top: 125px;
+  left: 50px;
+  position: absolute;
+  width: 280px;
+  transition: 0.8s;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 2px solid black;
+  outline: none;
+  background: transparent;
+}
+
+.submit-boton {
+  background-color: #03c6e9;
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  border: 0px;
+  outline: none;
+  border-radius: 30px;
 }
