@@ -13,19 +13,34 @@
 .linksHeader {
   color: white;
   text-decoration: none;
+  font-size: 20px;
+}
 
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navItem {
   margin-right: 20px;
-  /* Espacio entre elementos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .white-cart {
   color: white;
 }
 
+#total-entradas {
+  position: relative;
+  right: 70px;
+  top: -8px;
+}
+
 .card {
+  background-color: #fcfcfc;
   margin-top: 10px;
   padding: 5px;
   width: 100%;
@@ -77,7 +92,6 @@
   color: #000;
 }
 
-
 .precio {
   font-family: Arial, Helvetica, sans-serif;
   color: green;
@@ -97,8 +111,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 7rem;
-  height: 3rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem;
 }
 
 .btnComprar:hover {
@@ -121,7 +136,7 @@
 }
 
 .nombreProd {
-  font-size: 25px;
+  font-size: 20px;
   height: 33px;
   width: 100%;
   border: #000 1px solid;
@@ -141,7 +156,7 @@
 }
 
 .carrito-item {
-  background-color: #c9c2c2;
+  background-color: #f1efef;
   border: #000 solid 3px;
   border-bottom: 1px solid #dee2e6;
   padding-left: 10px;
@@ -153,16 +168,30 @@
   padding-bottom: 15px;
 }
 
+.carrito-item-info h4 {
+  font-size: 18px;
+  text-decoration: underline;
+}
+
 .fotoCarrito {
-  width: 100px;
+  width: 75px;
 }
 
-.carrito-item-info {
-  margin-right: 800px;
+.btnIrAPagar {
+  height: auto;
+  width: auto;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-
 
 .carrito-item-remove {
+  height: auto;
+  width: auto;
   background-color: #dc3545;
   color: #fff;
   border: none;
@@ -176,8 +205,17 @@
   background-color: #c82333;
 }
 
+.ContainerIrAPagar {
+  background-color: #6a9cd1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 410px;
+  padding-bottom: 15px;
+}
+
 #carrito-total {
-  color: green;
+  color: rgb(255, 255, 255);
   font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
@@ -236,7 +274,10 @@
   width: 40%;
 }
 
+
+
 #nombreYApellidoTitular {
+  text-align: center;
   width: 50%;
   height: 45px;
   border-radius: 5px;
@@ -250,6 +291,7 @@
 }
 
 .card-number-input {
+  text-align: center;
   width: 75px;
   margin-right: 5px;
   padding: 10px;
@@ -260,6 +302,7 @@
 
 #expiration,
 .cvc-input {
+  text-align: center;
   width: 25%;
   margin-bottom: 10px;
   padding: 10px;
@@ -283,6 +326,7 @@ h1 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 40px;
 }
+
 .container-general {
   height: 100%;
   width: 100%;
@@ -334,4 +378,157 @@ h1 {
   border: 0px;
   outline: none;
   border-radius: 30px;
+}
+
+
+
+
+
+/* CARRITOOOOOOOOOOOO */
+
+#abrirCarrito {
+  cursor: pointer;
+}
+
+#ventanaLateral {
+  position: fixed;
+  top: 0;
+  right: -500px;
+  width: 450px;
+  height: 100%;
+  background-color: whitesmoke;
+  padding: 20px;
+  transition: right 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+  /* Ajusta este valor según sea necesario */
+  overflow-y: auto;
+}
+
+
+#ventanaLateral.active {
+  right: 0;
+
+}
+
+#cerrarVentana {
+  color: red;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+#listaProductos {
+  list-style-type: none;
+  padding: 0;
+}
+
+#listaProductos li {
+  margin-bottom: 10px;
+}
+
+
+
+#ultimo-total {
+  font-size: 50px;
+}
+
+.container-ultimo-total {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#btnFinCompra {
+  background-color: #007bff;
+  color: white;
+  border: solid 2px black;
+  width: 9rem;
+  height: 3rem;
+}
+
+.cargando-pelis {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* -------------------------------------- PAGINA DE MANTENIMIENTO -------------------------------------- */
+.maintenance-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #c72626;
+}
+
+.maintenance-content {
+  margin-top: 90px;
+  text-align: center;
+  padding: 20px;
+}
+
+.maintenance-content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.maintenance-content p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.buttonIrInicio {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.buttonIrInicio:hover {
+  background-color: #0056b3;
+}
+
+.container-resumen {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  /* Para centrar horizontalmente */
+  display: flex;
+  flex-direction: column;
+  /* Para alinear verticalmente */
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e7e9;
+  border: solid black 2px;
+}
+
+.container-resumen h4 {
+  text-transform: capitalize;
+}
+
+.carrito-item-resumen {
+  width: 550px;
+}
+
+.titulo-container {
+  max-width: 100%; 
+}
+
+.titulo-container h4 {
+  white-space: normal; 
 }

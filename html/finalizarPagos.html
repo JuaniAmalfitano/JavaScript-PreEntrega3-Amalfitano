@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar Pagos</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../estilo/estilo.css">
+
+  <link rel="icon" type="image/jpg" href="../img/favicon.png" />
+
+</head>
+
+<body>
+
+  <div class="container headerColor">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom headerColor">
+      <a href="../index.html"
+        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <img class="img-fluid" src="../img/cine logo.png" alt="">
+      </a>
+
+      <ul class="nav">
+        <li class="navItem"><a href="../html/cartelera.html" class=" linksHeader" aria-current="page">Cartelera</a></li>
+        <li id="logout" class="navItem"><a href="" class="linksHeader">Logout</a></li>
+        <li class="navItem login-links"><a href="./html/iniciarSesion.html" class="linksHeader">Iniciar Sesion</a></li>
+        <li class="navItem login-links"><a href="./html/registro.html" class="linksHeader">Registrarse</a></li>
+      </ul>
+
+    </header>
+  </div>
+
+  <div id="PasarAPagar" class="row">
+    <div class="containerr">
+      <section class="container-pasarela text-center mt-5 row">
+        <h4>Pasarela de pago</h4>
+        <input class="mb-2 mt-2" type="text" id="nombreYApellidoTitular" placeholder="Nombre y Apellido del titular">
+        <label for="tarjeta">Ingrese su numero de tarjeta</label>
+        <div class="card-number">
+          <input type="text" maxlength="4" placeholder="1111" class="card-number-input" required>
+          <input type="text" maxlength="4" placeholder="2222" class="card-number-input" required>
+          <input type="text" maxlength="4" placeholder="3333" class="card-number-input" required>
+          <input type="text" maxlength="4" placeholder="4444" class="card-number-input" required>
+        </div>
+        <label for="vencimiento">Ingrese el mes y año de vencimiento</label>
+        <div>
+          <input type="text" maxlength="4" placeholder="MM/YY" id="expiration" required>
+        </div>
+        <label for="cvc">Ingrese su codigo de seguridad</label>
+        <div>
+          <input type="text" maxlength="3" placeholder="CVC" class="cvc-input" required>
+        </div>
+
+
+
+        <div class="MediosDePago">
+          <img src="../img/mediosDePago/mastercard@2x.png" alt="mastercard">
+          <img src="../img/mediosDePago/visa@2x.png" alt="visa">
+          <img src="../img/mediosDePago/mercadopago@2x.png" alt="mercadopago">
+          <img src="../img/mediosDePago/pagofacil@2x.png" alt="pagofacil">
+          <img src="../img/mediosDePago/rapipago@2x.png" alt="rapipago">
+          <img src="../img/mediosDePago/tarjeta-naranja@2x.png" alt="tarjeta naranja">
+        </div>
+
+        <div class="mt-2">
+          <button type="submit" id="btnFinCompra">Confirmar compra</button>
+        </div>
+
+        <div id="resumenCompra">
+
+        </div>
+
+
+
+      </section>
+    </div>
+
+
+  </div>
+
+  <hr>
+
+  <section class="container-resumen mt-3">
+    <h1 class="text-center">Resumen de Compra</h1>
+    <div class="text-center" id="resumen-compra">
+
+
+
+    </div>
+    <div id="TotalResumen">
+
+    </div>
+  </section>
+ 
+
+
+  <div class="container headerColor">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <p class="col-md-4 mb-0 text-white">&copy; 2024 Company, Inc</p>
+
+      <a href="../index.html"
+        class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <img class="headerColor" src="../img/cine logo.png" alt="">
+      </a>
+
+      <ul class="nav">
+        <li class="navItem"><a href="../html/cartelera.html" class=" linksHeader" aria-current="page">CARTELERA</a>
+        </li>
+        <li id="logout" class="navItem"><a href="" class="linksHeader">Logout</a></li>
+        <li class="navItem login-links"><a href="./html/iniciarSesion.html" class="linksHeader">Iniciar Sesion</a></li>
+        <li class="navItem login-links"><a href="./html/registro.html" class="linksHeader">Registrarse</a></li>
+      </ul>
+    </footer>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="../js/finalizarPagos.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/iniciarSesion.js"></script>
+  <script src="../js/registrarse.js"></script>
+  <script src="../js/index.js"></script>
+  <script src="../js/carrito.js"></script>
+
+
+</body>
+
+</html>
